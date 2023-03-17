@@ -88,30 +88,8 @@ class _HomeScreenState extends State<HomeScreen> {
               textColor: Colors.white,
               color: buttonColor,
               child: const Text('Register'),
-              onPressed: () async {
-                // Future RegistrationUser() async {
-                var APIURL =
-                    "https://uo1t934012.execute-api.us-east-1.amazonaws.com//addNewDevice";
-                // as Uri;
-
-                // Map mapeddate = {
-                //   'device_id': _securityKey.text,
-                //   'serial_id': _serialId.text
-                // };
-                var body = jsonEncode({
-                  'device_id': _serialId.text,
-                  'serial_id': _securityKey.text
-                });
-                print("JSON DATA: ${body}");
-
-                http.Response response =
-                    await http.post(Uri.parse(APIURL), body: body);
-
-                var data = jsonDecode(response.body);
-
-                print("DATA: ${data}");
-                // }
-
+              onPressed: () {
+                RegistrationUser();
                 Navigator.of(context).pop();
               },
             ),
@@ -120,7 +98,34 @@ class _HomeScreenState extends State<HomeScreen> {
       },
     );
   }
+  Future RegistrationUser() async {
+    var APIURL = Uri.parse("https://uo1t934012.execute-api.us-east-1.amazonaws.com//addNewDevice");    
+    Map mapeddate ={
+      'device_id': _serialId.text,
+      'serial_id': _securityKey.text
+    };
+    String requestBody = jsonEncode(mapeddate);
+    print("JSON DATA: ${requestBody}");
+    http.Response response = await http.post(APIURL,body:requestBody);
 
+    var data = jsonDecode(response.body);
+
+    print("DATA: ${data}");
+
+    showDialog(
+      context: context,
+      builder: (_) => AlertDialog(
+        title: Text('Response Data'),
+        content: Text(data.toString()),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: Text("Close"),
+          ),
+        ],
+      ),
+    );    
+  }
 // {email: milanpreetkaur502@gmail.com, serialID: D0314, deviceBooted: true, deviceProvisoned: true}
 
   @override
