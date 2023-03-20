@@ -4,7 +4,7 @@ import 'package:detest/download.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:http/http.dart' as http;
-
+// /jijent
 class DeviceScreen extends StatefulWidget {
   final String deviceId;
 
