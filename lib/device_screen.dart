@@ -74,7 +74,7 @@ class _DeviceScreenState extends State<DeviceScreen> {
         // print(videLinks);
         if (videLinks.isEmpty) {
           setState(() {
-            dataStatus = 'empty';
+            dataStatus = 'inactive';
             apiWait = false;
           });
         } else {
@@ -100,7 +100,7 @@ class _DeviceScreenState extends State<DeviceScreen> {
   Widget returnScreen(BuildContext context, Size size) {
     if (dataStatus == 'ok') {
       return Download(data: videLinks);
-    } else if (dataStatus == 'empty') {
+    } else if (dataStatus == 'inactive') {
       return const Center(
         child: Text(
           'SORRY WE HAVE NO FILE !',
