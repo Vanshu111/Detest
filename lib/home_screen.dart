@@ -22,6 +22,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
     response = getData(widget.email);
+    print("Sahil");
     _serialId = TextEditingController();
     _securityKey = TextEditingController();
     super.initState();
