@@ -226,7 +226,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               ),
                               Center(
                                 child: Text(
-                                  'STATUS',
+                                  'BOOT STATUS',
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 16,
