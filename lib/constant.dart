@@ -73,11 +73,11 @@ class Device {
   });
 
   factory Device.fromJson(Map<String, dynamic> dvc, nowInMS) {
-    if (dvc['status'] == 'inactive') {
+    if (dvc['status'] == 'empty') {
       return Device(
         deviceId: dvc['device_id'],
         registerStatus: dvc['register_status'],
-        status: dvc['status'],
+        status: 'inactive',
       );
     } else {
       String dt = dvc['status'].split(' ').sublist(1, 5).join(' ');
