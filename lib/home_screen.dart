@@ -22,7 +22,6 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
     response = getData(widget.email);
-//     print("Siya");
     _serialId = TextEditingController();
     _securityKey = TextEditingController();
     super.initState();
@@ -111,7 +110,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
     var data = jsonDecode(response.body);
 
-    print("ResponseDATA: ${data}");
+    print("DATA: ${data}");
 
     showDialog(
       context: context,
