@@ -110,7 +110,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
     var data = jsonDecode(response.body);
 
-    print("DATA: ${data}");
+    print("ResponseDATA: ${data}");
 
     showDialog(
       context: context,
