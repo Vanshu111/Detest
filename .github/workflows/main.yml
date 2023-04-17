@@ -21,25 +21,4 @@ jobs:
         cache: false 
 
     - name: Build Web
-      run: flutter build web name: Build Web
-
-on:
-  push:
-    branches:
-      - main  # Change this to your desired branch name
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-
-    - name: Install Flutter
-      uses: subosito/flutter-action@v2
-      with:
-        flutter-version: stable
-
-    - name: Build Web
       run: flutter build web --web-output-dir=build/web
