@@ -3,7 +3,7 @@ name: Build Web
 on:
   push:
     branches:
-      - main  # Change this to your desired branch name
+      - master  # Change this to your desired branch name
 
 jobs:
   build:
