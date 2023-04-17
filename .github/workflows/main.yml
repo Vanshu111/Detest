@@ -25,6 +25,8 @@ jobs:
       
     - name: Commit Changes
       run: |
+        git config --local user.email "vansharidhi1975@gmail.com"
+        git config --local user.name "Vanshu111"
         git add build/web
         git commit -m "Update build/web"
         git push
