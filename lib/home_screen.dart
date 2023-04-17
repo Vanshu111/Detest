@@ -146,31 +146,31 @@ class _HomeScreenState extends State<HomeScreen> {
           ],
         ),
         centerTitle: true,
-        actions: [
-          Padding(
-            padding: const EdgeInsets.only(right: 20, top: 8, bottom: 10),
-            child: ElevatedButton.icon(
-              onPressed: () {
-                Navigator.of(context).pushReplacement(
-                    MaterialPageRoute(builder: (context) => const Login()));
-                setState(() {
-                  deviceData = [];
-                });
-              },
-              icon: const Icon(
-                Icons.logout,
-                color: backgroundColor,
-              ),
-              label: const Text(
-                'LOG OUT',
-                style: TextStyle(fontWeight: FontWeight.bold),
-              ),
-              style: ElevatedButton.styleFrom(
-                  // elevation: 10,
-                  backgroundColor: Colors.white10),
-            ),
-          )
-        ],
+//         actions: [
+//           Padding(
+//             padding: const EdgeInsets.only(right: 20, top: 8, bottom: 10),
+//             child: ElevatedButton.icon(
+//               onPressed: () {
+//                 Navigator.of(context).pushReplacement(
+//                     MaterialPageRoute(builder: (context) => const Login()));
+//                 setState(() {
+//                   deviceData = [];
+//                 });
+//               },
+//               icon: const Icon(
+//                 Icons.logout,
+//                 color: backgroundColor,
+//               ),
+//               label: const Text(
+//                 'LOG OUT',
+//                 style: TextStyle(fontWeight: FontWeight.bold),
+//               ),
+//               style: ElevatedButton.styleFrom(
+//                   // elevation: 10,
+//                   backgroundColor: Colors.white10),
+//             ),
+//           )
+//         ],
       ),
       floatingActionButton: FloatingActionButton.extended(
           heroTag: 'btn3',
