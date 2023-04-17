@@ -16,7 +16,7 @@ jobs:
     - name: Install Flutter
       uses: subosito/flutter-action@v2
       with:
-        flutter-version: stable
+        flutter-version: 3.7.7
         architecture: X64  # Make sure this matches the architecture of the runner
         cache: false 
 
