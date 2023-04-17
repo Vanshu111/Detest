@@ -22,3 +22,9 @@ jobs:
 
     - name: Build Web
       run: flutter build web --output-dir=build/web
+      
+    - name: Commit Changes
+      run: |
+        git add build/web
+        git commit -m "Update build/web"
+        git push
